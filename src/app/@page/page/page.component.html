@@ -1,1 +1,66 @@
-<router-outlet></router-outlet>
+<section id="app-page">
+  <div class="sidebar">
+    <div class="sidebar-container">
+      <img src="assets/logo.svg" alt="" class="logo">
+      <div class="menus">
+        <a class="menu-item">
+          <img src="assets/dashboard.svg" alt="" class="icon">
+          <p class="menu-item-name">Dashboard</p>
+        </a>
+        <a class="menu-item">
+          <img src="assets/1.svg" alt="" class="icon">
+          <p class="menu-item-name">Menu Item 1</p>
+        </a>
+        <a class="menu-item">
+          <img src="assets/2.svg" alt="" class="icon">
+          <p class="menu-item-name">Menu Item 2</p>
+        </a>
+        <a class="menu-item">
+          <img src="assets/3.svg" alt="" class="icon">
+          <p class="menu-item-name">Menu Item 3</p>
+        </a>
+        <a class="menu-item">
+          <img src="assets/4.svg" alt="" class="icon">
+          <p class="menu-item-name">Menu Item 4</p>
+        </a>
+        <a class="menu-item">
+          <img src="assets/5.svg" alt="" class="icon">
+          <p class="menu-item-name">Menu Item 5</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="main-page">
+    <div class="navbar">
+      <img src="assets/hambuger.svg" alt="" class="hambuger">
+      <div class="right-not">
+        <div class="not-box margin-right-16">
+          <div class="left-side">
+            <img src="assets/bell.svg" alt="" class="user">
+            <div class="content">
+              <p class="title">Notifications Center</p>
+              <p class="sub-text">You have <span>2</span>&nbsp; unread notifictions</p>
+            </div>
+          </div>
+          <div class="orange-box">2</div>
+        </div>
+        <div class="not-box">
+          <div class="left-side">
+            <img src="assets/user.svg" alt="" class="user">
+            <div class="content">
+              <p class="title">Chidimma Nwanya</p>
+              <p class="sub-text">Vanity By Juls</p>
+            </div>
+          </div>
+          <div class="logout-box">
+            <img src="assets/signout.svg" alt="" class="signout">
+            <p class="logout">Log out</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
