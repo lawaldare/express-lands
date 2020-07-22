@@ -1,0 +1,89 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.left-side {
+  width: 66%;
+  height: 100%;
+  background: black;
+}
+
+.right-side {
+  width: 34%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 83px;
+}
+
+.logo {
+  width: 137px;
+  height: 32px;
+}
+
+.main-header {
+  font-family: France;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+  color: #000000;
+  margin-top: 58px;
+}
+
+.sub-header {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  margin-top: 16px;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form-input {
+  width: 320px;
+  height: 40px;
+  display: block;
+  background: #ffffff;
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  margin-bottom: 24px;
+  border: none;
+}
+
+button {
+  width: 320px;
+  height: 40px;
+  background: #13244e;
+  border-radius: 6px;
+  display: block;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.forgot-password {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #0093dd;
+  text-decoration: none;
+  text-align: center;
+}
