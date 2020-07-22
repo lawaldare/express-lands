@@ -5,10 +5,14 @@
       <img src="assets/logo.svg" alt="" class="logo">
       <p class="main-header">Login to <br> your account</p>
       <p class="sub-header">Welcome back! Please login to your account</p>
-      <form>
-        <input type="text" name="" id="" class="form-input" placeholder="Enter Username" autocomplete="off">
-        <input type="password" name="" id="" class="form-input" placeholder="Enter Password" autocomplete="off">
-        <button type="submit">Log in</button>
+      <form #loginForm='ngForm' (ngSubmit)="login(loginForm)">
+        <input type="text" name="username" [(ngModel)]="username" class="form-input" placeholder="Enter Username"
+          autocomplete="off" required>
+        <input type="password" name="password" [(ngModel)]="password" class="form-input" placeholder="Enter Password"
+          autocomplete="off" required>
+        <button type="submit" [disabled]="loginForm.invalid">
+          <i class="fa fa-spinner fa-spin bank-loader" *ngIf="loading"></i>
+          Log in</button>
         <a href="" class="forgot-password">Forgot Password?</a>
       </form>
     </div>
