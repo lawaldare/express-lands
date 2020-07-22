@@ -1,3 +1,4 @@
+import { MenuItemOneComponent } from './menu-item-one/menu-item-one.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PageComponent } from './page/page.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
     component: PageComponent,
     children: [
       { path: "dashboard", component: DashboardComponent },
+      { path: "menu-one", component: MenuItemOneComponent },
       { path: "", pathMatch: "full", redirectTo: "dashboard" },
     ],
   },
@@ -23,4 +25,5 @@ export class PageRoutingModule { }
 export const routedComponents = [
   PageComponent,
   DashboardComponent,
+  MenuItemOneComponent
 ];
