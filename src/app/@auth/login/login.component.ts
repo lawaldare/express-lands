@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
 
   login(form: NgForm) {
     this.loading = true;
-    console.log(form.value);
     this.authService.login(form.value).subscribe(data => {
       this.loading = false;
       if (data.verification_status) {
