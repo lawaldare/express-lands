@@ -26,14 +26,15 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     console.log(form.value);
     this.authService.login(form.value).subscribe(data => {
-      console.log(data);
-
       this.loading = false;
       if (data.verification_status) {
         this.router.navigate(['portal/dashboard']);
       } else {
         this.toastr.warning('Please verify your account');
       }
+    }, error => {
+      this.toastr.error(error.error);
+      this.loading = false;
     })
 
   }

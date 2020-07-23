@@ -14,15 +14,18 @@ export class DashboardComponent implements OnInit {
   capexTitle: string = 'CAPEX';
   capexPercent: number;
 
+
   opexOuterStrokeColor = '#FF6542';
   opexInnerStrokeColor = '#F8E9E2';
   opexTitle: string = 'OPEX';
   opexPercent: number;
 
+
   countOuterStrokeColor = '#F6AE2D';
   countInnerStrokeColor = '#FFFBF5';
   countTitle: string = 'ASSETS';
-  countPercent: string = '80';
+  countPercent: number;
+
 
   dashboardData: any;
   loading: boolean = false;
@@ -39,9 +42,9 @@ export class DashboardComponent implements OnInit {
     this.dashboardService.getDashboardData().subscribe(data => {
       this.loading = false;
       this.dashboardData = data[0];
-      this.capexPercent = (+this.dashboardData.totalPlayBudgetSpent / +this.dashboardData.totalPlayBudget) * 100;
-      this.opexPercent = (+this.dashboardData.totalWorkBudgetSpent / +this.dashboardData.totalWorkBudget) * 100;
-      this.capexPercent = (+this.dashboardData.totalCardsInUse / +this.dashboardData.totalCardsCount) * 100;
+      this.capexPercent = Math.round((+this.dashboardData.totalPlayBudgetSpent / +this.dashboardData.totalPlayBudget) * 100);
+      this.opexPercent = Math.round((+this.dashboardData.totalWorkBudgetSpent / +this.dashboardData.totalWorkBudget) * 100);
+      this.countPercent = Math.round((+this.dashboardData.totalCardsInUse / +this.dashboardData.totalCardsCount) * 100);
     })
   }
 
