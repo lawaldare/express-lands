@@ -9,11 +9,6 @@ import { PageComponent } from './page/page.component';
 
 
 
-// import { MobileSidebarComponent } from "./mobile-sidebar/mobile-sidebar.component";
-// import { MobileLeftSidebarComponent } from "./mobile-left-sidebar/mobile-left-sidebar.component";
-
-
-
 @NgModule({
   declarations: [
     ...routedComponents,
