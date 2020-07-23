@@ -1,4 +1,4 @@
-<section class="header">
+<section class="header" *ngIf="dashboardData">
   <p class="page-title">Dashboard</p>
   <div class="settings">
     <div class="customize">
@@ -11,7 +11,7 @@
   </div>
 </section>
 
-<section class="card-container">
+<section class="card-container" *ngIf="dashboardData">
   <div class="left-card">
     <img src="assets/close.svg" alt="" class="close">
     <p class="welcome">Welcome back! chidimma.</p>
@@ -28,7 +28,7 @@
     <img src="assets/world.svg" alt="" class="world-image">
   </div>
 </section>
-<section class="cards">
+<section class="cards" *ngIf="dashboardData">
   <div class="card">
     <div class="card-header">
       <p class="card-title">annual play budget</p>
@@ -45,7 +45,7 @@
       <div class="data-container">
         <div class="left">
           <p class="total-play">total play (NGN)</p>
-          <p class="total-amount">50,000,000</p>
+          <p class="total-amount">{{ dashboardData.totalPlayBudget }}</p>
         </div>
         <div class="right">
           <div class="total-spent">
@@ -61,11 +61,11 @@
       <div class="data-container">
         <div class="left">
           <p class="total-play">total spent (NGN)</p>
-          <p class="total-amount">50,000,000</p>
+          <p class="total-amount">{{ dashboardData.totalPlayBudgetSpent }}</p>
         </div>
         <div class="right">
           <p class="total-play">Balance (NGN)</p>
-          <p class="total-amount">50,000,000</p>
+          <p class="total-amount">{{ dashboardData.totalPlayBudgetBalance }}</p>
         </div>
       </div>
     </div>
@@ -86,7 +86,7 @@
       <div class="data-container">
         <div class="left">
           <p class="total-play">total play (NGN)</p>
-          <p class="total-amount">50,000,000</p>
+          <p class="total-amount">{{ dashboardData.totalWorkBudget }}</p>
         </div>
         <div class="right">
           <div class="total-spent">
@@ -102,11 +102,11 @@
       <div class="data-container">
         <div class="left">
           <p class="total-play">total spent (NGN)</p>
-          <p class="total-amount">50,000,000</p>
+          <p class="total-amount">{{ dashboardData.totalWorkBudgetSpent }}</p>
         </div>
         <div class="right">
           <p class="total-play">Balance (NGN)</p>
-          <p class="total-amount">50,000,000</p>
+          <p class="total-amount">{{ dashboardData.totalWorkBudgetBalance }}</p>
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@
       <div class="data-container">
         <div class="left">
           <p class="total-play color-white">total cards</p>
-          <p class="total-amount color-white">50,000,000</p>
+          <p class="total-amount color-white">{{ dashboardData.totalCardsCount }}</p>
         </div>
         <div class="right">
           <div class="total-spent">
@@ -140,13 +140,17 @@
       <div class="data-container">
         <div class="left">
           <p class="total-play color-white">cards in-use</p>
-          <p class="total-amount color-white">50,000,000</p>
+          <p class="total-amount color-white">{{ dashboardData.totalCardsInUse }}</p>
         </div>
         <div class="right">
           <p class="total-play color-white">in-active</p>
-          <p class="total-amount color-white">50,000,000</p>
+          <p class="total-amount color-white">{{ dashboardData.totalCardsInActive }}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div id='loading-overlay' *ngIf="loading">
+  <i class="fa fa-3x fa-spinner fa-spin"></i>
+</div>

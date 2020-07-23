@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 
 
@@ -17,6 +19,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgCircleProgressModule.forRoot()
   ],
