@@ -4,7 +4,7 @@
 }
 
 .sidebar {
-  width: 288px;
+  width: 20%;
   background: #eff5fb;
   box-shadow: inset -10px 0px 20px rgba(194, 203, 217, 0.15);
   border-radius: 0px;
@@ -29,7 +29,9 @@
 }
 
 .page {
-  width: 100%;
+  width: 80%;
+  height: calc(100% - 103px);
+  margin: 0 auto;
 }
 
 .menu-item {
@@ -67,7 +69,8 @@
 }
 
 .main-page {
-  width: calc(100% - 288px);
+  width: 80%;
+  background: #f2f7fc;
 }
 
 .navbar {

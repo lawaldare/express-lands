@@ -13,9 +13,140 @@
 
 <section class="card-container">
   <div class="left-card">
+    <img src="assets/close.svg" alt="" class="close">
     <p class="welcome">Welcome back! chidimma.</p>
     <p class="text">See overview of analytics and reporting metrics <br> and a lot more interesting stuffs you can do
       here.</p>
-    <button class="tour">take a tour</button>
+    <button class="tour-button">take a tour</button>
+    <img src="assets/trends.svg" alt="" class="trends">
+  </div>
+  <div class="right-card">
+    <p class="welcome">optimized application processing</p>
+    <p class="text">We've optimized the system to process your <br> application as fast as possible. <span>Click on the
+        button <br> below to get started.</span></p>
+    <button class="request-button">new request</button>
+    <img src="assets/world.svg" alt="" class="world-image">
+  </div>
+</section>
+<section class="cards">
+  <div class="card">
+    <div class="card-header">
+      <p class="card-title">annual play budget</p>
+      <select class="drop-down">
+        <option value="">This Year</option>
+      </select>
+    </div>
+    <p class="summary">Summary</p>
+    <div class="chart-container">
+      <app-chart [outerStrokeColor]="capexOuterStrokeColor" [innerStrokeColor]="capexInnerStrokeColor"
+        [percent]="capexPercent" [title]="capexTitle"></app-chart>
+    </div>
+    <div class="card-content">
+      <div class="data-container">
+        <div class="left">
+          <p class="total-play">total play (NGN)</p>
+          <p class="total-amount">50,000,000</p>
+        </div>
+        <div class="right">
+          <div class="total-spent">
+            <div class="bullet"></div>
+            <p class="total-spent-text">Total Spent</p>
+          </div>
+          <div class="total-spent">
+            <div class="bullet bullet-initial"></div>
+            <p class="total-spent-text">Balance</p>
+          </div>
+        </div>
+      </div>
+      <div class="data-container">
+        <div class="left">
+          <p class="total-play">total spent (NGN)</p>
+          <p class="total-amount">50,000,000</p>
+        </div>
+        <div class="right">
+          <p class="total-play">Balance (NGN)</p>
+          <p class="total-amount">50,000,000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <p class="card-title">annual work budget</p>
+      <select class="drop-down">
+        <option value="">This Year</option>
+      </select>
+    </div>
+    <p class="summary">Summary</p>
+    <div class="chart-container">
+      <app-chart [outerStrokeColor]="opexOuterStrokeColor" [innerStrokeColor]="opexInnerStrokeColor"
+        [percent]="opexPercent" [title]="opexTitle"></app-chart>
+    </div>
+    <div class="card-content bg-light-orange">
+      <div class="data-container">
+        <div class="left">
+          <p class="total-play">total play (NGN)</p>
+          <p class="total-amount">50,000,000</p>
+        </div>
+        <div class="right">
+          <div class="total-spent">
+            <div class="bullet bg-deep-orange"></div>
+            <p class="total-spent-text">Total Spent</p>
+          </div>
+          <div class="total-spent">
+            <div class="bullet bullet-initial"></div>
+            <p class="total-spent-text">Balance</p>
+          </div>
+        </div>
+      </div>
+      <div class="data-container">
+        <div class="left">
+          <p class="total-play">total spent (NGN)</p>
+          <p class="total-amount">50,000,000</p>
+        </div>
+        <div class="right">
+          <p class="total-play">Balance (NGN)</p>
+          <p class="total-amount">50,000,000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="count-card">
+    <div class="count-card-header">
+      <p class="card-title color-white" style="margin-bottom: 5px;">cards count</p>
+      <p class="summary color-white">Summary</p>
+    </div>
+    <div class="chart-container">
+      <app-chart [outerStrokeColor]="countOuterStrokeColor" [innerStrokeColor]="countInnerStrokeColor"
+        [percent]="countPercent" [title]="countTitle"></app-chart>
+    </div>
+    <div class="card-content bg-deep-blue count-card-content">
+      <div class="data-container">
+        <div class="left">
+          <p class="total-play color-white">total cards</p>
+          <p class="total-amount color-white">50,000,000</p>
+        </div>
+        <div class="right">
+          <div class="total-spent">
+            <div class="bullet bg-deep-yellow"></div>
+            <p class="total-spent-text color-white">In-use</p>
+          </div>
+          <div class="total-spent">
+            <div class="bullet bullet-initial"></div>
+            <p class="total-spent-text color-white">In-active</p>
+          </div>
+        </div>
+      </div>
+      <div class="data-container">
+        <div class="left">
+          <p class="total-play color-white">cards in-use</p>
+          <p class="total-amount color-white">50,000,000</p>
+        </div>
+        <div class="right">
+          <p class="total-play color-white">in-active</p>
+          <p class="total-amount color-white">50,000,000</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

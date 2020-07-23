@@ -1,0 +1,39 @@
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-85deg);
+
+  circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: green;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+
+    &:nth-child(2) {
+      stroke-dasharray: 440;
+      stroke-dashoffset: 440;
+      stroke-dashoffset: calc(440px - (440px * 50) / 100);
+      stroke: red;
+    }
+  }
+}
+
+.chart-card {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 65px;
+  left: 52px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  text-transform: uppercase;
+}
