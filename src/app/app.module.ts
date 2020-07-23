@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TooltipModule } from 'ng2-tooltip-directive';
+
+
 
 
 
@@ -21,7 +24,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    NgCircleProgressModule.forRoot()
+    NgCircleProgressModule.forRoot(),
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

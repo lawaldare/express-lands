@@ -4,6 +4,9 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TooltipModule } from 'ng2-tooltip-directive';
+
+
 
 
 @NgModule({
@@ -13,6 +16,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
   imports: [
     CommonModule,
     FormsModule,
+    TooltipModule,
     NgCircleProgressModule.forRoot(
       {
         "radius": 60,
